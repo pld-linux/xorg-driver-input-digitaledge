@@ -1,20 +1,21 @@
 Summary:	X.org input driver for DigitalEdge devices
 Summary(pl):	Sterownik wej¶ciowy X.org dla urz±dzeñ DigitalEdge
 Name:		xorg-driver-input-digitaledge
-Version:	1.0.0.1
+Version:	1.0.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/driver/xf86-input-digitaledge-%{version}.tar.bz2
-# Source0-md5:	4f315f75e17235f8f699c9f5d77099ce
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-input-digitaledge-%{version}.tar.bz2
+# Source0-md5:	5d49931e4c3f5fa6cc675dfdd4757519
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-proto-inputproto-devel
+BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
-BuildRequires:	xorg-xserver-server-devel
+BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,5 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/input/digitaledge_drv.so
 #%{_mandir}/man4/digitaledge.4x*
