@@ -1,12 +1,12 @@
 Summary:	X.org input driver for DigitalEdge devices
 Summary(pl):	Sterownik wej¶ciowy X.org dla urz±dzeñ DigitalEdge
 Name:		xorg-driver-input-digitaledge
-Version:	1.0.1
+Version:	1.0.1.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-input-digitaledge-%{version}.tar.bz2
-# Source0-md5:	5d49931e4c3f5fa6cc675dfdd4757519
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-input-digitaledge-%{version}.tar.bz2
+# Source0-md5:	63b3095cec75b8d06c18a4eb4d5c62c5
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,8 +42,7 @@ Sterownik wej¶ciowy X.org dla urz±dzeñ DigitalEdge.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	drivermandir=%{_mandir}/man4
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
@@ -54,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/input/digitaledge_drv.so
-#%{_mandir}/man4/digitaledge.4x*
+#%{_mandir}/man4/digitaledge.4*
