@@ -1,5 +1,5 @@
 Summary:	X.org input driver for DigitalEdge devices
-Summary(pl):	Sterownik wej¶ciowy X.org dla urz±dzeñ DigitalEdge
+Summary(pl.UTF-8):   Sterownik wejÅ›ciowy X.org dla urzÄ…dzeÅ„ DigitalEdge
 Name:		xorg-driver-input-digitaledge
 Version:	1.1.0
 Release:	0.1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X.org input driver for DigitalEdge devices.
 
-%description -l pl
-Sterownik wej¶ciowy X.org dla urz±dzeñ DigitalEdge.
+%description -l pl.UTF-8
+Sterownik wejÅ›ciowy X.org dla urzÄ…dzeÅ„ DigitalEdge.
 
 %prep
 %setup -q -n xf86-input-digitaledge-%{version}
