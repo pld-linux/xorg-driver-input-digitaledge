@@ -1,12 +1,12 @@
 Summary:	X.org input driver for DigitalEdge devices
 Summary(pl.UTF-8):	Sterownik wejściowy X.org dla urządzeń DigitalEdge
 Name:		xorg-driver-input-digitaledge
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-digitaledge-%{version}.tar.bz2
-# Source0-md5:	53461c34cc0712aacab92b820b9fcb84
+# Source0-md5:	4c27e0f3c6447e76df39a837fd46a00f
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
